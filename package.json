@@ -9,6 +9,10 @@
   "author": "donstacky",
   "license": "ISC",
   "dependencies": {
+    "normalize-scss": "^8.0.0",
     "sass": "^1.69.6"
+  },
+  "devDependencies": {
+    "prettier": "3.1.1"
   }
 }

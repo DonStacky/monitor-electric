@@ -1,0 +1,114 @@
+.header {
+  background: $primary-color;
+  height: 8rem;
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+  }
+
+  &__logo {
+    height: 4.6rem;
+    margin-right: 22.6px;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 2.8rem;
+    margin-right: 8.6rem;
+  }
+
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    line-height: 2.4rem;
+    gap: 0.5rem;
+    padding: 1rem 1.6rem;
+    background: transparent;
+    border: none;
+    transition: 0.3s;
+    font-size: 1.8rem;
+    color: #ffffff;
+    cursor: pointer;
+
+    &:hover {
+      background: $secondary-color;
+      color: $font-color;
+
+      & .icon__timeline {
+        background: url(./../../assets/svg/header/timeline-hover.svg);
+      }
+
+      & .icon__report {
+        background: url(./../../assets/svg/header/document-hover.svg);
+      }
+
+      & .icon__service {
+        background: url(./../../assets/svg/header/service-hover.svg);
+      }
+
+      & .icon__compact {
+        background: url(./../../assets/svg/header/compact-hover.svg);
+      }
+
+      & .icon__week {
+        background: url(./../../assets/svg/header/week-hover.svg);
+      }
+    }
+  }
+
+  &__nav {
+    display: inline-block;
+  }
+
+  &__btn-group {
+    margin-left: auto;
+  }
+
+  &__icon {
+    display: inline-block;
+    transition: 0.3s;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.icon__timeline {
+  background: url(./../../assets/svg/header/timeline.svg);
+}
+
+.icon__report {
+  background: url(./../../assets/svg/header/document.svg);
+}
+
+.icon__service {
+  background: url(./../../assets/svg/header/service.svg);
+}
+
+.icon__compact {
+  background: url(./../../assets/svg/header/compact.svg);
+}
+
+.icon__week {
+  background: url(./../../assets/svg/header/week.svg);
+}
+
+.button__left {
+  border: 1px solid #BDBDBD;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+}
+
+.button__center {
+  border: 1px solid #BDBDBD;
+  border-right: none;
+}
+
+.button__right {
+  border: 1px solid #BDBDBD;
+  border-radius: 0 4px 4px 0;
+}

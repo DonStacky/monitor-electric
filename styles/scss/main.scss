@@ -1,23 +1,21 @@
-@import './fonts.scss';
+@import "./../../node_modules/normalize-scss/sass/normalize";
+@import "./fonts.scss";
+@import "./constants.scss";
+@import "./header.scss";
 
-.test {
-  font-family: Roboto, sans-serif;
-  font-size: 20px;
+html {
+  min-height: 100%;
+  height: auto;
+  font-size: 10px;
+  overflow: hidden;
 }
 
-.test1 {
-  font-family: Segoe UI, sans-serif;
-  font-size: 20px;
+body {
+  margin: 0;
 }
 
-.test2 {
-  font-family: Roboto, sans-serif;
-  font-size: 20px;
-  font-weight: semibold;
-}
-
-.test3 {
-  font-family: Roboto, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
+.container {
+  max-width: 1982px;
+  padding: 0 31px;
+  margin: 0 auto;
 }
