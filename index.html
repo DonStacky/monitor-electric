@@ -13,28 +13,82 @@
         <img src="./assets/image/logo.png" alt="logo" class="header__logo" />
         <h1 class="header__title">Контрольные замеры</h1>
         <div class="header__nav">
-          <button class="header__button button__left">
-            <span class="header__icon icon__timeline"></span>
+          <button class="button header__button button__left">
+            <span class="icon icon__timeline"></span>
             Замеры</button
-          ><button class="header__button button__center">
-            <span class="header__icon icon__report"></span>
+          ><button class="button header__button button__center">
+            <span class="icon icon__report"></span>
             Отчеты</button
-          ><button class="header__button button__right">
-            <span class="header__icon icon__service"></span>
-            Сервис</button>
+          ><button class="button header__button button__right">
+            <span class="icon icon__service"></span>
+            Сервис
+          </button>
         </div>
         <div class="header__btn-group">
-          <button class="header__button button__left">
-            <span class="header__icon icon__compact"></span>
-            </button
-          ><button class="header__button button__right">
-            <span class="header__icon icon__week"></span>
-            </button
-          >
+          <button class="button header__button button__left">
+            <span class="icon icon__compact"></span></button
+          ><button class="button header__button button__right">
+            <span class="icon icon__week"></span>
+          </button>
         </div>
       </div>
     </header>
-    <body></body>
-    <footer></footer>
+    <main class="main container">
+      <section class="selection">
+        <div class="selection__head">
+          <button class="button selection__button">
+            <span class="icon icon__menu"></span>
+            Подстанции
+          </button>
+          <span class="selection__text">></span>
+          <h2 class="selection__title">ТЭЦ ПГУ ГСР Энерго</h2>
+          <button class="button selection__button selection__button--contained">
+            <span class="icon icon__save"></span>
+            Сохранить
+          </button>
+        </div>
+        <div class="selection__tabs">
+          <button class="selection__tab">Подстанция</button>
+          <button class="selection__tab selection__tab--selected">
+            Оборудование
+          </button>
+          <div class="selection__line"></div>
+        </div>
+        <div class="selection__btn-group">
+          <button
+            class="button selection__button selection__button--small selection__switch--left"
+          >
+            Список
+          </button>
+          <button
+            class="button selection__button selection__button--small selection__switch--right selection__switch--selected"
+          >
+            Ведомость
+          </button>
+        </div>
+        <div class="selection__filters">
+          Тип
+          <div class="selection__filter selection__filter--type">
+            Трансформаторы<span class="icon icon__down"></span>
+          </div>
+          РУ
+          <div class="selection__filter selection__filter--type">
+            110<span class="icon icon__down"></span>
+          </div>
+          <div class="selection__switch">
+            <div class="switch">
+              <div class="switch__circle"></div>
+            </div>
+            Схема
+          </div>
+        </div>
+      </section>
+      <section class="measure"></section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <span class="footer__text">Версия 11.6.5.41</span>
+      </div>
+    </footer>
   </body>
 </html>

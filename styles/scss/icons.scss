@@ -1,0 +1,18 @@
+.icon__menu {
+  background: url(./../../assets/svg/main/menu.svg);
+}
+
+.icon__save {
+  background: url(./../../assets/svg/main/save.svg) 0 0 / contain no-repeat;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.icon__down {
+  position: absolute;
+  right: 1.2rem;
+  top: 0.9rem;
+  background: url(./../../assets/svg/main/down.svg) 0 0 / contain no-repeat;
+  height: 1.2rem;
+  width: 1.2rem;
+}

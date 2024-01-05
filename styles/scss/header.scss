@@ -1,7 +1,6 @@
 .header {
   background: $primary-color;
   height: 8rem;
-  font-family: Segoe UI, sans-serif;
   color: #ffffff;
 
   &__inner {
@@ -23,17 +22,13 @@
   }
 
   &__button {
-    display: inline-flex;
-    justify-content: center;
-    line-height: 2.4rem;
     gap: 0.5rem;
     padding: 1rem 1.6rem;
-    background: transparent;
-    border: none;
-    transition: 0.3s;
     font-size: 1.8rem;
     color: #ffffff;
-    cursor: pointer;
+    font-family:
+      Segoe UI,
+      sans-serif;
 
     &:hover {
       background: $secondary-color;
@@ -68,13 +63,6 @@
   &__btn-group {
     margin-left: auto;
   }
-
-  &__icon {
-    display: inline-block;
-    transition: 0.3s;
-    width: 2.4rem;
-    height: 2.4rem;
-  }
 }
 
 .icon__timeline {
@@ -98,17 +86,17 @@
 }
 
 .button__left {
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
   border-radius: 4px 0 0 4px;
   border-right: none;
 }
 
 .button__center {
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
   border-right: none;
 }
 
 .button__right {
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
   border-radius: 0 4px 4px 0;
 }

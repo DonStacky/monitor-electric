@@ -1,21 +1,31 @@
-@import "./../../node_modules/normalize-scss/sass/normalize";
-@import "./fonts.scss";
-@import "./constants.scss";
-@import "./header.scss";
+@import "./selection.scss";
 
-html {
-  min-height: 100%;
-  height: auto;
-  font-size: 10px;
-  overflow: hidden;
+.main {
+  display: flex;
+  width: calc(100% - 6.2rem);
+  flex-grow: 1;
 }
 
-body {
-  margin: 0;
+.measure {
+  width: 50%;
 }
 
-.container {
-  max-width: 1982px;
-  padding: 0 31px;
-  margin: 0 auto;
+.switch {
+  box-sizing: border-box;
+  display: inline-flex;
+  margin-right: 0.8rem;
+  align-items: center;
+  width: 3.2rem;
+  height: 1.6rem;
+  border: 1px solid rgba($color: #000000, $alpha: 0.15);
+  border-radius: 3.2rem;
+  cursor: pointer;
+
+  &__circle {
+    margin-left: 0.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: rgba($color: #000000, $alpha: 0.25);
+  }
 }

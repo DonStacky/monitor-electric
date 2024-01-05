@@ -1,0 +1,52 @@
+@import "./../../node_modules/normalize-scss/sass/normalize";
+@import "./fonts.scss";
+@import "./constants.scss";
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+  font-family:
+    Segoe UI,
+    sans-serif;
+}
+
+.container {
+  max-width: 1982px;
+  padding: 0 31px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.icon {
+  display: inline-block;
+  transition: 0.3s;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family:
+    Segoe UI,
+    sans-serif;
+}
+
+@import "./header.scss";
+@import "./footer.scss";
+@import "./main.scss";
+@import "./icons.scss";
