@@ -13,21 +13,27 @@
         <img src="./assets/image/logo.png" alt="logo" class="header__logo" />
         <h1 class="header__title">Контрольные замеры</h1>
         <div class="header__nav">
-          <button class="button header__button button__left">
+          <button
+            class="button header__button header__button--selected button--left"
+          >
             <span class="icon icon__timeline"></span>
             Замеры</button
-          ><button class="button header__button button__center">
+          ><button class="button header__button button--center">
             <span class="icon icon__report"></span>
             Отчеты</button
-          ><button class="button header__button button__right">
+          ><button class="button header__button button--right">
             <span class="icon icon__service"></span>
             Сервис
           </button>
         </div>
         <div class="header__btn-group">
-          <button class="button header__button--icon button__left">
+          <button
+            class="button header__button header__button--small button--left"
+          >
             <span class="icon icon__compact"></span></button
-          ><button class="button header__button--icon button__right">
+          ><button
+            class="button header__button header__button--small header__button--selected button--right"
+          >
             <span class="icon icon__week"></span>
           </button>
         </div>
@@ -56,12 +62,12 @@
         </div>
         <div class="selection__btn-group">
           <button
-            class="button selection__button selection__button--small selection__button--left"
+            class="button selection__button selection__button--small button--left"
           >
             Список
           </button>
           <button
-            class="button selection__button selection__button--small selection__button--right selection__button--selected"
+            class="button selection__button selection__button--small button--right selection__button--selected"
           >
             Ведомость
           </button>
@@ -109,7 +115,59 @@
           </tbody>
         </table>
       </section>
-      <section class="measure"></section>
+      <div class="slider">
+        <div class="slider__thumb"></div>
+      </div>
+      <section class="measure">
+        <div class="measure__head">
+          <img
+            src="./assets/image/Обозначение оборудования 1.png"
+            alt="Обозначение оборудования 1"
+          />
+          <h2 class="measure__title">РТСН\НН-2</h2>
+        </div>
+        <div class="measure__controls">
+          <div class="measure__btn-group">
+            <div class="measure__button button">
+              <span class="icon icon__certificate"></span>Проверить
+            </div>
+            <div class="measure__button button">
+              <span class="icon icon__block"></span>Отменить проверку
+            </div>
+            <div class="measure__button button">
+              <span class="icon icon__edit"></span>Редактировать
+            </div>
+            <div class="measure__button button">
+              <span class="icon icon__delete"></span>Удалить
+            </div>
+          </div>
+          <div class="measure__btn-group">
+            <div class="flex">
+              <div
+                class="measure__icon-button measure__icon-button--selected button button--left"
+              >
+                <span class="icon icon__vertical"></span>
+              </div>
+              <div class="measure__icon-button button button--right">
+                <span class="icon icon__horizontal"></span>
+              </div>
+            </div>
+            <div class="measure__icon-button button">
+              <span class="icon icon__expand"></span>
+            </div>
+          </div>
+        </div>
+        <div class="measure__controls measure__text">
+          <span class="measure__text"
+            ><span class="measure__text--red">Нет </span>проверенных
+            замеров</span
+          >
+          <div class="measure__switch">
+            <div class="measure__circle"></div>
+          </div>
+          <span class="measure__text">Группировать по дате</span>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">

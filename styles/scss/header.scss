@@ -26,14 +26,16 @@
     padding: 1rem 1.6rem;
     font-size: 1.8rem;
     color: #ffffff;
+    border-color: #bdbdbd;
 
-    &--icon {
+    &--small {
       padding: 0.6rem 0.8rem;
     }
 
-    &:hover {
+    &--selected {
       background: $secondary-color;
       color: $font-color;
+      pointer-events: none;
 
       & .icon__timeline {
         background: url(./../../assets/svg/header/timeline-hover.svg);
@@ -54,6 +56,10 @@
       & .icon__week {
         background: url(./../../assets/svg/header/week-hover.svg);
       }
+    }
+
+    &:hover {
+      background: darken($primary-color, 5%);
     }
   }
 
@@ -84,20 +90,4 @@
 
 .icon__week {
   background: url(./../../assets/svg/header/week.svg);
-}
-
-.button__left {
-  border: 1px solid #bdbdbd;
-  border-radius: 4px 0 0 4px;
-  border-right: none;
-}
-
-.button__center {
-  border: 1px solid #bdbdbd;
-  border-right: none;
-}
-
-.button__right {
-  border: 1px solid #bdbdbd;
-  border-radius: 0 4px 4px 0;
 }

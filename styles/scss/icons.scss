@@ -1,3 +1,10 @@
+.icon {
+  display: inline-block;
+  transition: 0.3s;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 .icon__menu {
   background: url(./../../assets/svg/main/menu.svg);
 }
@@ -15,4 +22,41 @@
   background: url(./../../assets/svg/main/down.svg) 0 0 / contain no-repeat;
   height: 1.2rem;
   width: 1.2rem;
+}
+
+.icon__certificate {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(./../../assets/svg/main/certificate.svg);
+}
+
+.icon__block {
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url(./../../assets/svg/main/block.svg) 0 0 / contain no-repeat;
+}
+
+.icon__edit {
+  width: 2rem;
+  height: 2rem;
+  background: url(./../../assets/svg/main/edit.svg);
+}
+
+.icon__delete {
+  width: 2rem;
+  height: 2rem;
+  background: url(./../../assets/svg/main/delete.svg);
+}
+
+.icon__vertical {
+  background: url(./../../assets/svg/main/view-vertical.svg);
+}
+
+.icon__horizontal {
+  background: url(./../../assets/svg/main/view-horizontal.svg);
+}
+.icon__expand {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(./../../assets/svg/main/expand.svg);
 }

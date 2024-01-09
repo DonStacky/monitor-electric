@@ -22,7 +22,8 @@ body {
     sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
 }
 
@@ -33,24 +34,37 @@ h1, h2 {
   height: 100%;
 }
 
-.icon {
-  display: inline-block;
-  transition: 0.3s;
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
 .button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   background: transparent;
-  border: none;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
   cursor: pointer;
   transition: 0.3s;
   font-family:
     Segoe UI,
     sans-serif;
+
+  &--left {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--right {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+  }
+
+  &--center {
+    border-left: none;
+    border-radius: 0;
+  }
+}
+
+.flex {
+  display: flex;
 }
 
 @import "./header.scss";
