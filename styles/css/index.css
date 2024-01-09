@@ -22,8 +22,11 @@
   font-style: normal;
   font-weight: bold;
 }
-html {
+* {
   box-sizing: border-box;
+}
+
+html {
   font-size: 10px;
 }
 
@@ -34,9 +37,11 @@ body {
   min-height: 100vh;
   height: auto;
   margin: 0;
-  font-family:
-    Segoe UI,
-    sans-serif;
+  font-family: Segoe UI, sans-serif;
+}
+
+h1, h2 {
+  margin: 0;
 }
 
 .container {
@@ -61,9 +66,7 @@ body {
   border: none;
   cursor: pointer;
   transition: 0.3s;
-  font-family:
-    Segoe UI,
-    sans-serif;
+  font-family: Segoe UI, sans-serif;
 }
 
 .header {
@@ -91,9 +94,9 @@ body {
   padding: 1rem 1.6rem;
   font-size: 1.8rem;
   color: #ffffff;
-  font-family:
-    Segoe UI,
-    sans-serif;
+}
+.header__button--icon {
+  padding: 0.6rem 0.8rem;
 }
 .header__button:hover {
   background: #f2f2f2;
@@ -167,28 +170,19 @@ body {
   color: #ffffff;
 }
 
-.main {
-  display: flex;
-  width: calc(100% - 6.2rem);
-  flex-grow: 1;
-}
-
 .selection {
   width: 50%;
   margin-right: 3rem;
-  font-family:
-    Segoe UI,
-    sans-serif;
+  font-family: Segoe UI, sans-serif;
   font-size: 1.6rem;
 }
 .selection__head {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin: 1.7rem 1.6rem;
+  margin: 1.7rem 0;
 }
 .selection__button {
-  height: 3.8rem;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   gap: 0.8rem;
@@ -197,6 +191,7 @@ body {
   color: #333333;
 }
 .selection__button--small {
+  display: block;
   background: #f2f2f2;
   border: 1px solid #ced4da;
   padding: 0.45rem 1.6rem;
@@ -219,24 +214,27 @@ body {
   background: #005baa;
   color: #ffffff;
   margin-left: auto;
+  padding: 0.9rem 1.2rem;
+  font-family: Roboto, sans-serif;
+  word-spacing: 0.1px;
+  line-height: 2rem;
 }
 .selection__button--contained:hover {
   background: transparent;
   color: #333333;
 }
 .selection__button--contained:hover .icon__save {
-  background: url(./../../assets/svg/main/save-hover.svg) 0 0 / contain
-    no-repeat;
+  background: url(./../../assets/svg/main/save-hover.svg) 0 0/contain no-repeat;
 }
 .selection__button:hover {
   background: #005baa;
   color: #ffffff;
 }
 .selection__button:hover .icon__menu {
-  background: url(./../../assets/svg/main/menu-hover.svg) 0 0 / contain
-    no-repeat;
+  background: url(./../../assets/svg/main/menu-hover.svg) 0 0/contain no-repeat;
 }
 .selection__btn-group {
+  display: flex;
   margin-bottom: 1.6rem;
 }
 .selection__text {
@@ -259,10 +257,8 @@ body {
   font-size: 1.6rem;
   border-bottom: 1px solid #dee2e6;
   transition: 0.3s;
-  line-height: 150%;
-  font-family:
-    Segoe UI,
-    sans-serif;
+  line-height: 145%;
+  font-family: Segoe UI, sans-serif;
 }
 .selection__tab--selected {
   background: #f2f2f2;
@@ -279,18 +275,20 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 1.6rem;
 }
 .selection__filter {
   position: relative;
   border-radius: 4px;
-  border: 1px solid #ced4da;
+  border: 1px solid #CED4DA;
   font-size: 1.4rem;
   color: #212529;
   padding: 0.45rem 1.2rem;
+  line-height: 150%;
 }
 .selection__filter--type {
   padding-right: 9.6rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 .selection__filter--power {
   padding-right: 5.4rem;
@@ -300,23 +298,34 @@ body {
   color: #212529;
 }
 
-.icon__menu {
-  background: url(./../../assets/svg/main/menu.svg);
+table {
+  border-collapse: collapse;
 }
 
-.icon__save {
-  background: url(./../../assets/svg/main/save.svg) 0 0 / contain no-repeat;
-  height: 1.6rem;
-  width: 1.6rem;
+td, th {
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  font-size: 1.6rem;
+  text-align: left;
+  line-height: 2rem;
+  word-spacing: 0.1px;
 }
 
-.icon__down {
-  position: absolute;
-  right: 1.2rem;
-  top: 0.9rem;
-  background: url(./../../assets/svg/main/down.svg) 0 0 / contain no-repeat;
-  height: 1.2rem;
-  width: 1.2rem;
+th {
+  background-color: #f2f2f2;
+}
+
+tr {
+  cursor: pointer;
+}
+tr:hover {
+  background: rgba(0, 91, 170, 0.1);
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .measure {
@@ -324,7 +333,6 @@ body {
 }
 
 .switch {
-  box-sizing: border-box;
   display: inline-flex;
   margin-right: 0.8rem;
   align-items: center;
@@ -340,6 +348,32 @@ body {
   height: 1.2rem;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.25);
+}
+
+.table {
+  width: 100%;
+}
+.table__head {
+  font-size: 1.8rem;
+}
+
+.icon__menu {
+  background: url(./../../assets/svg/main/menu.svg);
+}
+
+.icon__save {
+  background: url(./../../assets/svg/main/save.svg) 0 0/contain no-repeat;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.icon__down {
+  position: absolute;
+  right: 1.2rem;
+  top: 0.9rem;
+  background: url(./../../assets/svg/main/down.svg) 0 0/contain no-repeat;
+  height: 1.2rem;
+  width: 1.2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

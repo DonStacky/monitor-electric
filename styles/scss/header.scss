@@ -26,9 +26,10 @@
     padding: 1rem 1.6rem;
     font-size: 1.8rem;
     color: #ffffff;
-    font-family:
-      Segoe UI,
-      sans-serif;
+
+    &--icon {
+      padding: 0.6rem 0.8rem;
+    }
 
     &:hover {
       background: $secondary-color;

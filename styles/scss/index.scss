@@ -2,8 +2,11 @@
 @import "./fonts.scss";
 @import "./constants.scss";
 
-html {
+* {
   box-sizing: border-box;
+}
+
+html {
   font-size: 10px;
 }
 
@@ -17,6 +20,10 @@ body {
   font-family:
     Segoe UI,
     sans-serif;
+}
+
+h1, h2 {
+  margin: 0;
 }
 
 .container {

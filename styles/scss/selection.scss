@@ -10,11 +10,11 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin: 1.7rem 1.6rem;
+    margin: 1.7rem 0;
   }
 
   &__button {
-    height: 3.8rem;
+    // height: 3.8rem;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
     gap: 0.8rem;
@@ -23,6 +23,7 @@
     color: #333333;
 
     &--small {
+      display: block;
       background: $secondary-color;
       border: 1px solid #ced4da;
       padding: 0.45rem 1.6rem;
@@ -49,6 +50,10 @@
       background: $primary-color;
       color: #ffffff;
       margin-left: auto;
+      padding: 0.9rem 1.2rem;
+      font-family: Roboto, sans-serif;
+      word-spacing: 0.1px;
+      line-height: 2rem;
 
       &:hover {
         background: transparent;
@@ -73,6 +78,7 @@
   }
 
   &__btn-group {
+    display: flex;
     margin-bottom: 1.6rem;
   }
 
@@ -99,7 +105,7 @@
     font-size: 1.6rem;
     border-bottom: 1px solid #dee2e6;
     transition: 0.3s;
-    line-height: 150%;
+    line-height: 145%;
     font-family:
       Segoe UI,
       sans-serif;
@@ -122,6 +128,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1.6rem;
   }
 
   &__filter {
@@ -131,10 +138,11 @@
     font-size: 1.4rem;
     color: #212529;
     padding: 0.45rem 1.2rem;
+    line-height: 150%;
 
     &--type {
       padding-right: 9.6rem;
-      margin-right: 2rem;
+      margin-right: 1rem;
     }
 
     &--power {
@@ -145,5 +153,30 @@
   &__switch {
     margin-left: auto;
     color: #212529;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  font-size: 1.6rem;
+  text-align: left;
+  line-height: 2rem;
+  word-spacing: 0.1px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr {
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(#005BAA, 0.1);
   }
 }
