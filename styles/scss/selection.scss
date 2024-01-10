@@ -1,5 +1,6 @@
 .selection {
-  width: 50%;
+  flex-grow: 1;
+  width: 40%;
   margin-right: 3rem;
   font-family:
     Segoe UI,
@@ -130,31 +131,5 @@
   &__switch {
     margin-left: auto;
     color: #212529;
-  }
-}
-
-table {
-  border-collapse: collapse;
-}
-
-td,
-th {
-  border: 1px solid #e0e0e0;
-  padding: 1rem;
-  font-size: 1.6rem;
-  text-align: left;
-  line-height: 2rem;
-  word-spacing: 0.1px;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-tr {
-  cursor: pointer;
-
-  &:hover {
-    background: rgba(#005baa, 0.1);
   }
 }

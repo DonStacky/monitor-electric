@@ -12,7 +12,7 @@
 
   &__logo {
     height: 4.6rem;
-    margin-right: 22.6px;
+    margin-right: 2.26rem;
   }
 
   &__title {
@@ -38,23 +38,23 @@
       pointer-events: none;
 
       & .icon__timeline {
-        background: url(./../../assets/svg/header/timeline-hover.svg);
+        background-image: url(./../../assets/svg/header/timeline-hover.svg);
       }
 
       & .icon__report {
-        background: url(./../../assets/svg/header/document-hover.svg);
+        background-image: url(./../../assets/svg/header/document-hover.svg);
       }
 
       & .icon__service {
-        background: url(./../../assets/svg/header/service-hover.svg);
+        background-image: url(./../../assets/svg/header/service-hover.svg);
       }
 
       & .icon__compact {
-        background: url(./../../assets/svg/header/compact-hover.svg);
+        background-image: url(./../../assets/svg/header/compact-hover.svg);
       }
 
       & .icon__week {
-        background: url(./../../assets/svg/header/week-hover.svg);
+        background-image: url(./../../assets/svg/header/week-hover.svg);
       }
     }
 
@@ -73,21 +73,21 @@
 }
 
 .icon__timeline {
-  background: url(./../../assets/svg/header/timeline.svg);
+  background-image: url(./../../assets/svg/header/timeline.svg);
 }
 
 .icon__report {
-  background: url(./../../assets/svg/header/document.svg);
+  background-image: url(./../../assets/svg/header/document.svg);
 }
 
 .icon__service {
-  background: url(./../../assets/svg/header/service.svg);
+  background-image: url(./../../assets/svg/header/service.svg);
 }
 
 .icon__compact {
-  background: url(./../../assets/svg/header/compact.svg);
+  background-image: url(./../../assets/svg/header/compact.svg);
 }
 
 .icon__week {
-  background: url(./../../assets/svg/header/week.svg);
+  background-image: url(./../../assets/svg/header/week.svg);
 }

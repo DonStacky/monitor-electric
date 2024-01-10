@@ -8,6 +8,14 @@
 
 html {
   font-size: 10px;
+
+  @media (max-width: 1600px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 1360px) {
+    font-size: 6px;
+  }
 }
 
 body {
@@ -71,3 +79,4 @@ h2 {
 @import "./footer.scss";
 @import "./main.scss";
 @import "./icons.scss";
+@import "./table.scss";

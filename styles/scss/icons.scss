@@ -3,14 +3,15 @@
   transition: 0.3s;
   width: 2.4rem;
   height: 2.4rem;
+  background-size: contain;
 }
 
 .icon__menu {
-  background: url(./../../assets/svg/main/menu.svg);
+  background-image: url(./../../assets/svg/main/menu.svg);
 }
 
 .icon__save {
-  background: url(./../../assets/svg/main/save.svg) 0 0 / contain no-repeat;
+  background-image: url(./../../assets/svg/main/save.svg);
   height: 1.6rem;
   width: 1.6rem;
 }
@@ -19,7 +20,7 @@
   position: absolute;
   right: 1.2rem;
   top: 0.9rem;
-  background: url(./../../assets/svg/main/down.svg) 0 0 / contain no-repeat;
+  background-image: url(./../../assets/svg/main/down.svg);
   height: 1.2rem;
   width: 1.2rem;
 }
@@ -27,36 +28,44 @@
 .icon__certificate {
   width: 1.4rem;
   height: 1.4rem;
-  background: url(./../../assets/svg/main/certificate.svg);
+  background-image: url(./../../assets/svg/main/certificate.svg);
 }
 
 .icon__block {
   width: 1.8rem;
   height: 1.8rem;
-  background: url(./../../assets/svg/main/block.svg) 0 0 / contain no-repeat;
+  background-image: url(./../../assets/svg/main/block.svg);
 }
 
 .icon__edit {
   width: 2rem;
   height: 2rem;
-  background: url(./../../assets/svg/main/edit.svg);
+  background-image: url(./../../assets/svg/main/edit.svg);
 }
 
 .icon__delete {
   width: 2rem;
   height: 2rem;
-  background: url(./../../assets/svg/main/delete.svg);
+  background-image: url(./../../assets/svg/main/delete.svg);
 }
 
 .icon__vertical {
-  background: url(./../../assets/svg/main/view-vertical.svg);
+  background-image: url(./../../assets/svg/main/view-vertical.svg);
 }
 
 .icon__horizontal {
-  background: url(./../../assets/svg/main/view-horizontal.svg);
+  background-image: url(./../../assets/svg/main/view-horizontal.svg);
 }
+
 .icon__expand {
   width: 1.6rem;
   height: 1.6rem;
-  background: url(./../../assets/svg/main/expand.svg);
+  background-image: url(./../../assets/svg/main/expand.svg);
+}
+
+.icon__plus {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 1.2rem;
+  background-image: url(./../../assets/svg/main/plus.svg);
 }
