@@ -27,7 +27,6 @@ tr:hover td:not(.measure__add-row) {
   width: 50%;
 }
 
-
 .measure__table {
   & th {
     padding: 0.8rem;
@@ -85,7 +84,7 @@ tr .measure__add-row {
   opacity: 0;
 }
 
-.checkbox+label {
+.checkbox + label {
   display: flex;
   height: 100%;
   width: 100%;
@@ -94,7 +93,7 @@ tr .measure__add-row {
   user-select: none;
 }
 
-.checkbox+label::before {
+.checkbox + label::before {
   content: '';
   display: inline-block;
   width: 2rem;
@@ -105,7 +104,7 @@ tr .measure__add-row {
   cursor: pointer;
 }
 
-.checkbox:checked+label::before {
+.checkbox:checked + label::before {
   border-color: $primary-color;
   background-color: $primary-color;
   background-image: url(./../../assets/svg/main/check-mark.svg);
@@ -114,14 +113,14 @@ tr .measure__add-row {
   background-position: 50% 50%;
 }
 
-.checkbox:not(:disabled):not(:checked)+label:hover::before {
+.checkbox:not(:disabled):not(:checked) + label:hover::before {
   border-color: #b3d7ff;
 }
 
-.checkbox:focus+label::before {
+.checkbox:focus + label::before {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.checkbox:focus:not(:checked)+label::before {
+.checkbox:focus:not(:checked) + label::before {
   border-color: #80bdff;
 }

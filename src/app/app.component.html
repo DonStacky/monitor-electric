@@ -1,168 +1,162 @@
-  <div class="app-root">
-    <header class="header">
-      <div class="container header__inner">
-        <img src="../assets/image/logo.png" alt="logo" class="header__logo" />
-        <h1 class="header__title">Контрольные замеры</h1>
-        <div class="header__nav">
-          <button
-            class="button header__button header__button--selected button--left"
-          >
-            <span class="icon icon__timeline"></span>
-            Замеры</button
-          ><button class="button header__button button--center">
-            <span class="icon icon__report"></span>
-            Отчеты</button
-          ><button class="button header__button button--right">
-            <span class="icon icon__service"></span>
-            Сервис
-          </button>
+<div class="app-root">
+  <header class="header">
+    <div class="container header__inner">
+      <img src="../assets/image/logo.png" alt="logo" class="header__logo" />
+      <h1 class="header__title">Контрольные замеры</h1>
+      <div class="header__nav">
+        <button
+          class="button header__button header__button--selected button--left">
+          <span class="icon icon__timeline"></span>
+          Замеры</button
+        ><button class="button header__button button--center">
+          <span class="icon icon__report"></span>
+          Отчеты</button
+        ><button class="button header__button button--right">
+          <span class="icon icon__service"></span>
+          Сервис
+        </button>
+      </div>
+      <div class="header__btn-group">
+        <button
+          class="button header__button header__button--small button--left">
+          <span class="icon icon__compact"></span></button
+        ><button
+          class="button header__button header__button--small header__button--selected button--right">
+          <span class="icon icon__week"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="main container">
+    <section class="selection">
+      <div class="selection__head">
+        <button class="button selection__button">
+          <span class="icon icon__menu"></span>
+          Подстанции
+        </button>
+        <span class="selection__text">></span>
+        <h2 class="selection__title">ТЭЦ ПГУ ГСР Энерго</h2>
+        <button class="button selection__button selection__button--contained">
+          <span class="icon icon__save"></span>
+          Сохранить
+        </button>
+      </div>
+      <div class="selection__tabs">
+        <button class="selection__tab">Подстанция</button>
+        <button class="selection__tab selection__tab--selected">
+          Оборудование
+        </button>
+        <div class="selection__line"></div>
+      </div>
+      <div class="selection__btn-group">
+        <button
+          class="button selection__button selection__button--small button--left">
+          Список
+        </button>
+        <button
+          class="button selection__button selection__button--small button--right selection__button--selected">
+          Ведомость
+        </button>
+      </div>
+      <div class="selection__filters">
+        Тип
+        <div class="selection__filter selection__filter--type">
+          Трансформаторы<span class="icon icon__down"></span>
         </div>
-        <div class="header__btn-group">
-          <button
-            class="button header__button header__button--small button--left"
-          >
-            <span class="icon icon__compact"></span></button
-          ><button
-            class="button header__button header__button--small header__button--selected button--right"
-          >
-            <span class="icon icon__week"></span>
-          </button>
+        РУ
+        <div class="selection__filter selection__filter--power">
+          110<span class="icon icon__down"></span>
+        </div>
+        <div class="selection__switch">
+          <div class="switch">
+            <div class="switch__circle"></div>
+          </div>
+          Схема
         </div>
       </div>
-    </header>
-    <main class="main container">
-      <section class="selection">
-        <div class="selection__head">
-          <button class="button selection__button">
-            <span class="icon icon__menu"></span>
-            Подстанции
-          </button>
-          <span class="selection__text">></span>
-          <h2 class="selection__title">ТЭЦ ПГУ ГСР Энерго</h2>
-          <button class="button selection__button selection__button--contained">
-            <span class="icon icon__save"></span>
-            Сохранить
-          </button>
-        </div>
-        <div class="selection__tabs">
-          <button class="selection__tab">Подстанция</button>
-          <button class="selection__tab selection__tab--selected">
-            Оборудование
-          </button>
-          <div class="selection__line"></div>
-        </div>
-        <div class="selection__btn-group">
-          <button
-            class="button selection__button selection__button--small button--left"
-          >
-            Список
-          </button>
-          <button
-            class="button selection__button selection__button--small button--right selection__button--selected"
-          >
-            Ведомость
-          </button>
-        </div>
-        <div class="selection__filters">
-          Тип
-          <div class="selection__filter selection__filter--type">
-            Трансформаторы<span class="icon icon__down"></span>
-          </div>
-          РУ
-          <div class="selection__filter selection__filter--power">
-            110<span class="icon icon__down"></span>
-          </div>
-          <div class="selection__switch">
-            <div class="switch">
-              <div class="switch__circle"></div>
-            </div>
-            Схема
-          </div>
-        </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th class="table__head">Наименование</th>
-              <th>U ном.</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>РТСН\НН-1</td>
-              <td>6</td>
-            </tr>
-            <tr>
-              <td>РТСН\НН-2</td>
-              <td>6</td>
-            </tr>
-            <tr>
-              <td>БТ1\НН-2</td>
-              <td>10.5</td>
-            </tr>
-            <tr>
-              <td>БТ-1\ВН</td>
-              <td>110</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <div class="slider">
-        <div class="slider__thumb"></div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="table__head">Наименование</th>
+            <th>U ном.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>РТСН\НН-1</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>РТСН\НН-2</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>БТ1\НН-2</td>
+            <td>10.5</td>
+          </tr>
+          <tr>
+            <td>БТ-1\ВН</td>
+            <td>110</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <div class="slider">
+      <div class="slider__thumb"></div>
+    </div>
+    <section class="measure">
+      <div class="measure__head">
+        <img
+          src="../assets/image/Обозначение оборудования 1.png"
+          alt="Обозначение оборудования 1" />
+        <h2 class="measure__title">РТСН\НН-2</h2>
       </div>
-      <section class="measure">
-        <div class="measure__head">
-          <img
-            src="../assets/image/Обозначение оборудования 1.png"
-            alt="Обозначение оборудования 1"
-          />
-          <h2 class="measure__title">РТСН\НН-2</h2>
-        </div>
-        <div class="measure__controls">
-          <div class="measure__btn-group">
-            <div class="measure__button button">
-              <span class="icon icon__certificate"></span>Проверить
-            </div>
-            <div class="measure__button button">
-              <span class="icon icon__block"></span>Отменить проверку
-            </div>
-            <div class="measure__button button">
-              <span class="icon icon__edit"></span>Редактировать
-            </div>
-            <div class="measure__button button">
-              <span class="icon icon__delete"></span>Удалить
-            </div>
+      <div class="measure__controls">
+        <div class="measure__btn-group">
+          <div class="measure__button button">
+            <span class="icon icon__certificate"></span>Проверить
           </div>
-          <div class="measure__btn-group">
-            <div class="flex">
-              <div
-                class="measure__icon-button measure__icon-button--selected button button--left"
-              >
-                <span class="icon icon__vertical"></span>
-              </div>
-              <div class="measure__icon-button button button--right">
-                <span class="icon icon__horizontal"></span>
-              </div>
-            </div>
-            <div class="measure__icon-button button">
-              <span class="icon icon__expand"></span>
-            </div>
+          <div class="measure__button button">
+            <span class="icon icon__block"></span>Отменить проверку
+          </div>
+          <div class="measure__button button">
+            <span class="icon icon__edit"></span>Редактировать
+          </div>
+          <div class="measure__button button">
+            <span class="icon icon__delete"></span>Удалить
           </div>
         </div>
-        <div class="measure__info measure__text">
-          <span class="measure__text"
-            ><span class="measure__text--red">Нет </span>проверенных
-            замеров</span
-          >
-          <div class="measure__switch">
-            <div class="measure__circle"></div>
+        <div class="measure__btn-group">
+          <div class="flex">
+            <div
+              class="measure__icon-button measure__icon-button--selected button button--left">
+              <span class="icon icon__vertical"></span>
+            </div>
+            <div class="measure__icon-button button button--right">
+              <span class="icon icon__horizontal"></span>
+            </div>
           </div>
-          <span class="measure__text">Группировать по дате</span>
+          <div class="measure__icon-button button">
+            <span class="icon icon__expand"></span>
+          </div>
         </div>
-        <table class="measure__table">
-          <thead>
-            <tr>
-              <th><input type="checkbox" name="c0" id="c0" class="checkbox">
-              <label for="c0"></label></th>
+      </div>
+      <div class="measure__info measure__text">
+        <span class="measure__text"
+          ><span class="measure__text--red">Нет </span>проверенных замеров</span
+        >
+        <div class="measure__switch">
+          <div class="measure__circle"></div>
+        </div>
+        <span class="measure__text">Группировать по дате</span>
+      </div>
+      <table class="measure__table">
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox" name="c0" id="c0" class="checkbox" />
+              <label for="c0"></label>
+            </th>
             <th class="measure__table--col1">Дата</th>
             <th class="measure__table--col2">Время</th>
             <th class="measure__table--col3">Источник</th>
@@ -172,115 +166,129 @@
             <th class="measure__table--col7">P, MBt</th>
             <th class="measure__table--col8">Q, Mвар</th>
             <th class="measure__table--col9">cos φ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="10" class="measure__add-row">
-                <span class="icon icon__plus"></span>
-                Добавить новые замеры
-              </td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="c1" id="c1" class="checkbox">
-                <label for="c1"></label></td>
-              <td>30.07.2022</td>
-              <td>10:15:23</td>
-              <td>Оператор</td>
-              <td>—</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="c2" id="c2" class="checkbox">
-                <label for="c2"></label></td>
-              <td>30.07.2022</td>
-              <td>10:08:44</td>
-              <td>Оператор</td>
-              <td>—</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="c3" id="c3" class="checkbox">
-                <label for="c3"></label></td>
-              <td>29.07.2022</td>
-              <td>15:08:44</td>
-              <td>Оператор</td>
-              <td>a</td>
-              <td>1</td>
-              <td>0.5</td>
-              <td>3</td>
-              <td>0.7</td>
-              <td>0.67</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="c4" id="c4" class="checkbox">
-                <label for="c4"></label></td>
-              <td>12.06.2022</td>
-              <td>10:28:02</td>
-              <td>SCADA</td>
-              <td>b</td>
-              <td>1</td>
-              <td>0.6</td>
-              <td>2.756</td>
-              <td>0.9</td>
-              <td>0.83</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="c5" id="c5" class="checkbox">
-                <label for="c5"></label></td>
-              <td>05.05.2022</td>
-              <td>13:56:39</td>
-              <td>АСКУЭ</td>
-              <td>c</td>
-              <td>1.2</td>
-              <td>0.5</td>
-              <td>3.143</td>
-              <td>0.78</td>
-              <td>0.67</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="c6" id="c6" class="checkbox">
-                <label for="c6"></label></td>
-              <td>05.05.2022</td>
-              <td>13:56:39</td>
-              <td>АСКУЭ</td>
-              <td>c</td>
-              <td>1.2</td>
-              <td>0.5</td>
-              <td>3.143</td>
-              <td>0.78</td>
-              <td>0.67</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="c7" id="c7" class="checkbox">
-                <label for="c7"></label>  </td>
-              <td>02.03.2022</td>
-              <td>17:43:51</td>
-              <td>Регистратор</td>
-              <td>ab</td>
-              <td>1.1</td>
-              <td>0.4</td>
-              <td>3.343</td>
-              <td>0.76</td>
-              <td>0.65</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <span class="footer__text">Версия 11.6.5.41</span>
-      </div>
-    </footer>
-  </div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="10" class="measure__add-row">
+              <span class="icon icon__plus"></span>
+              Добавить новые замеры
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="c1" id="c1" class="checkbox" />
+              <label for="c1"></label>
+            </td>
+            <td>30.07.2022</td>
+            <td>10:15:23</td>
+            <td>Оператор</td>
+            <td>—</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="c2" id="c2" class="checkbox" />
+              <label for="c2"></label>
+            </td>
+            <td>30.07.2022</td>
+            <td>10:08:44</td>
+            <td>Оператор</td>
+            <td>—</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="c3" id="c3" class="checkbox" />
+              <label for="c3"></label>
+            </td>
+            <td>29.07.2022</td>
+            <td>15:08:44</td>
+            <td>Оператор</td>
+            <td>a</td>
+            <td>1</td>
+            <td>0.5</td>
+            <td>3</td>
+            <td>0.7</td>
+            <td>0.67</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="c4" id="c4" class="checkbox" />
+              <label for="c4"></label>
+            </td>
+            <td>12.06.2022</td>
+            <td>10:28:02</td>
+            <td>SCADA</td>
+            <td>b</td>
+            <td>1</td>
+            <td>0.6</td>
+            <td>2.756</td>
+            <td>0.9</td>
+            <td>0.83</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="c5" id="c5" class="checkbox" />
+              <label for="c5"></label>
+            </td>
+            <td>05.05.2022</td>
+            <td>13:56:39</td>
+            <td>АСКУЭ</td>
+            <td>c</td>
+            <td>1.2</td>
+            <td>0.5</td>
+            <td>3.143</td>
+            <td>0.78</td>
+            <td>0.67</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="c6" id="c6" class="checkbox" />
+              <label for="c6"></label>
+            </td>
+            <td>05.05.2022</td>
+            <td>13:56:39</td>
+            <td>АСКУЭ</td>
+            <td>c</td>
+            <td>1.2</td>
+            <td>0.5</td>
+            <td>3.143</td>
+            <td>0.78</td>
+            <td>0.67</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="c7" id="c7" class="checkbox" />
+              <label for="c7"></label>
+            </td>
+            <td>02.03.2022</td>
+            <td>17:43:51</td>
+            <td>Регистратор</td>
+            <td>ab</td>
+            <td>1.1</td>
+            <td>0.4</td>
+            <td>3.343</td>
+            <td>0.76</td>
+            <td>0.65</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__text">Версия 11.6.5.41</span>
+    </div>
+  </footer>
+</div>
 
 <router-outlet></router-outlet>
