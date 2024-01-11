@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./app/styles/fonts.scss";
+@import "./app/styles/constants.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+
+  @media (max-width: 1600px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 1360px) {
+    font-size: 6px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.app-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: auto;
+  font-family:
+    Segoe UI,
+    sans-serif;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1982px;
+  padding: 0 31px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family:
+    Segoe UI,
+    sans-serif;
+
+  &--left {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--right {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+  }
+
+  &--center {
+    border-left: none;
+    border-radius: 0;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+@import "./app/styles/header.scss";
+@import "./app/styles/main.scss";
+@import "./app/styles/footer.scss";
+@import "./app/styles/icons.scss";
+@import "./app/styles/table.scss";

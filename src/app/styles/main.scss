@@ -1,0 +1,40 @@
+@import "./selection.scss";
+@import "./measure.scss";
+
+.main {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.switch {
+  display: inline-flex;
+  margin-right: 0.8rem;
+  align-items: center;
+  width: 3.2rem;
+  height: 1.6rem;
+  border: 1px solid rgba($color: #000000, $alpha: 0.15);
+  border-radius: 3.2rem;
+  cursor: pointer;
+
+  &__circle {
+    margin-left: 0.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: rgba($color: #000000, $alpha: 0.25);
+  }
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+
+  &__thumb {
+    background: url(../../assets/svg/main/thumb.svg) 0 0 / contain no-repeat;
+    width: 0.7rem;
+    height: 3.56rem;
+    margin: 0.2rem;
+  }
+}
