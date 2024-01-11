@@ -113,32 +113,32 @@
       </div>
       <div class="measure__controls">
         <div class="measure__btn-group">
-          <div class="measure__button button">
+          <button class="measure__button button">
             <span class="icon icon__certificate"></span>Проверить
-          </div>
-          <div class="measure__button button">
+          </button>
+          <button class="measure__button button">
             <span class="icon icon__block"></span>Отменить проверку
-          </div>
-          <div class="measure__button button">
+          </button>
+          <button class="measure__button button" (click)="editRow()">
             <span class="icon icon__edit"></span>Редактировать
-          </div>
-          <div class="measure__button button">
+          </button>
+          <button class="measure__button button" (click)="deleteRow()">
             <span class="icon icon__delete"></span>Удалить
-          </div>
+          </button>
         </div>
         <div class="measure__btn-group">
           <div class="flex">
-            <div
+            <button
               class="measure__icon-button measure__icon-button--selected button button--left">
               <span class="icon icon__vertical"></span>
-            </div>
-            <div class="measure__icon-button button button--right">
+            </button>
+            <button class="measure__icon-button button button--right">
               <span class="icon icon__horizontal"></span>
-            </div>
+            </button>
           </div>
-          <div class="measure__icon-button button">
+          <button class="measure__icon-button button">
             <span class="icon icon__expand"></span>
-          </div>
+          </button>
         </div>
       </div>
       <div class="measure__info measure__text">
@@ -171,114 +171,26 @@
         <tbody>
           <tr>
             <td colspan="10" class="measure__add-row">
-              <span class="icon icon__plus"></span>
-              Добавить новые замеры
+              <button class="button" (click)="addRow()">
+                <span class="icon icon__plus"></span>
+                Добавить новые замеры
+              </button>
             </td>
           </tr>
-          <tr>
+          <tr *ngFor="let row of rows">
             <td>
-              <input type="checkbox" name="c1" id="c1" class="checkbox" />
-              <label for="c1"></label>
+              <input type="checkbox" name={{row.name}} id={{row.name}} class="checkbox" />
+              <label for={{row.name}}></label>
             </td>
-            <td>30.07.2022</td>
-            <td>10:15:23</td>
-            <td>Оператор</td>
-            <td>—</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="c2" id="c2" class="checkbox" />
-              <label for="c2"></label>
-            </td>
-            <td>30.07.2022</td>
-            <td>10:08:44</td>
-            <td>Оператор</td>
-            <td>—</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="c3" id="c3" class="checkbox" />
-              <label for="c3"></label>
-            </td>
-            <td>29.07.2022</td>
-            <td>15:08:44</td>
-            <td>Оператор</td>
-            <td>a</td>
-            <td>1</td>
-            <td>0.5</td>
-            <td>3</td>
-            <td>0.7</td>
-            <td>0.67</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="c4" id="c4" class="checkbox" />
-              <label for="c4"></label>
-            </td>
-            <td>12.06.2022</td>
-            <td>10:28:02</td>
-            <td>SCADA</td>
-            <td>b</td>
-            <td>1</td>
-            <td>0.6</td>
-            <td>2.756</td>
-            <td>0.9</td>
-            <td>0.83</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="c5" id="c5" class="checkbox" />
-              <label for="c5"></label>
-            </td>
-            <td>05.05.2022</td>
-            <td>13:56:39</td>
-            <td>АСКУЭ</td>
-            <td>c</td>
-            <td>1.2</td>
-            <td>0.5</td>
-            <td>3.143</td>
-            <td>0.78</td>
-            <td>0.67</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="c6" id="c6" class="checkbox" />
-              <label for="c6"></label>
-            </td>
-            <td>05.05.2022</td>
-            <td>13:56:39</td>
-            <td>АСКУЭ</td>
-            <td>c</td>
-            <td>1.2</td>
-            <td>0.5</td>
-            <td>3.143</td>
-            <td>0.78</td>
-            <td>0.67</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="c7" id="c7" class="checkbox" />
-              <label for="c7"></label>
-            </td>
-            <td>02.03.2022</td>
-            <td>17:43:51</td>
-            <td>Регистратор</td>
-            <td>ab</td>
-            <td>1.1</td>
-            <td>0.4</td>
-            <td>3.343</td>
-            <td>0.76</td>
-            <td>0.65</td>
+            <td>{{row.date}}</td>
+            <td>{{row.time}}</td>
+            <td>{{row.source}}</td>
+            <td>{{row.phase}}</td>
+            <td>{{row.voltage}}</td>
+            <td>{{row.amperage}}</td>
+            <td>{{row.power}}</td>
+            <td>{{row.repower}}</td>
+            <td>{{row.angle}}</td>
           </tr>
         </tbody>
       </table>

@@ -73,9 +73,18 @@ tr:hover td:not(.measure__add-row) {
 
 tr .measure__add-row {
   padding: 0.85rem 1.2rem;
-  line-height: 130%;
-  color: $primary-color;
-  cursor: pointer;
+
+  & button {
+    border: none;
+    color: $primary-color;
+    line-height: 130%;
+    font-size: 1.6rem;
+    padding: 0;
+
+    &:hover {
+      color: darken($primary-color, 5%);
+    }
+  }
 }
 
 .checkbox {
