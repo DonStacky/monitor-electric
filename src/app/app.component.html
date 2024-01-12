@@ -105,51 +105,57 @@
       <div class="slider__thumb"></div>
     </div>
     <section class="measure">
-      <div class="overlay" *ngIf="isAddModalOpen">
+      <div class="overlay" *ngIf="dataService.isAddModalOpen">
         <div class="modal measure__text">
           <label for="source">Источник ввода</label>
           <input type="text" name="source" #source />
-          <button class="button measure__button" (click)="addRow(source.value)">
+          <button
+            class="button measure__button"
+            (click)="dataService.addRow(source.value)">
             Ввод
           </button>
           <button
             class="button measure__button modal--close"
-            (click)="closeModal()">
+            (click)="dataService.closeModal()">
             x
           </button>
         </div>
       </div>
-      <div class="overlay" *ngIf="isEditModalOpen">
+      <div class="overlay" *ngIf="dataService.isEditModalOpen">
         <div class="modal modal__edit measure__text">
           <label>Дата<input type="text" #date /></label>
           <label>Время<input type="text" #time /></label>
           <label>Источник ввода<input type="text" #source /></label>
           <button
             class="button measure__button"
-            (click)="editRow(date.value, time.value, source.value)">
+            (click)="dataService.editRow(date.value, time.value, source.value)">
             Редактировать
           </button>
           <button
             class="button measure__button modal--close"
-            (click)="closeModal()">
+            (click)="dataService.closeModal()">
             x
           </button>
         </div>
       </div>
-      <div class="overlay" *ngIf="isDeleteModalOpen">
+      <div class="overlay" *ngIf="dataService.isDeleteModalOpen">
         <div class="modal modal__delete measure__text">
           <span>Удалить выбранные элементы?</span>
           <div class="flex">
-            <button class="button measure__button" (click)="deleteRow()">
+            <button
+              class="button measure__button"
+              (click)="dataService.deleteRow()">
               Ок
             </button>
-            <button class="button measure__button" (click)="closeModal()">
+            <button
+              class="button measure__button"
+              (click)="dataService.closeModal()">
               Отмена
             </button>
           </div>
           <button
             class="button measure__button modal--close"
-            (click)="closeModal()">
+            (click)="dataService.closeModal()">
             x
           </button>
         </div>
@@ -168,10 +174,14 @@
           <button class="measure__button button">
             <span class="icon icon__block"></span>Отменить проверку
           </button>
-          <button class="measure__button button" (click)="openEditModal()">
+          <button
+            class="measure__button button"
+            (click)="dataService.openEditModal()">
             <span class="icon icon__edit"></span>Редактировать
           </button>
-          <button class="measure__button button" (click)="openDeleteModal()">
+          <button
+            class="measure__button button"
+            (click)="dataService.openDeleteModal()">
             <span class="icon icon__delete"></span>Удалить
           </button>
         </div>
@@ -220,22 +230,22 @@
         <tbody>
           <tr>
             <td colspan="10" class="measure__add-row">
-              <button class="button" (click)="openAddModal()">
+              <button class="button" (click)="dataService.openAddModal()">
                 <span class="icon icon__plus"></span>
                 Добавить новые замеры
               </button>
             </td>
           </tr>
           <tr
-            *ngFor="let row of rows"
-            [class.selected]="checkedRowsId.includes(row.id)">
+            *ngFor="let row of dataService.rows"
+            [class.selected]="dataService.checkedRowsId.includes(row.id)">
             <td>
               <input
                 type="checkbox"
                 name="{{row.id}}"
                 id="{{row.id}}"
                 class="checkbox"
-                (click)="checkRow(row.id)" />
+                (click)="dataService.checkRow(row.id)" />
               <label for="{{row.id}}"></label>
             </td>
             <td>{{row.date}}</td>
