@@ -1,4 +1,4 @@
-import { Row } from "./row";
+import { Row } from './row';
 
 export const ROWS: Row[] = [
   {
@@ -11,7 +11,7 @@ export const ROWS: Row[] = [
     power: '',
     repower: '',
     angle: '',
-    name: 'c1',
+    id: 'c1'
   },
   {
     date: '30.07.2022',
@@ -23,7 +23,7 @@ export const ROWS: Row[] = [
     power: '',
     repower: '',
     angle: '',
-    name: 'c2',
+    id: 'c2'
   },
   {
     date: '29.07.2022',
@@ -35,7 +35,7 @@ export const ROWS: Row[] = [
     power: '3',
     repower: '0.7',
     angle: '0.67',
-    name: 'c3',
+    id: 'c3'
   },
   {
     date: '12.06.2022',
@@ -47,7 +47,7 @@ export const ROWS: Row[] = [
     power: '2.756',
     repower: '0.9',
     angle: '0.83',
-    name: 'c4',
+    id: 'c4'
   },
   {
     date: '05.05.2022',
@@ -59,7 +59,7 @@ export const ROWS: Row[] = [
     power: '3.143',
     repower: '0.78',
     angle: '0.67',
-    name: 'c5',
+    id: 'c5'
   },
   {
     date: '05.05.2022',
@@ -71,7 +71,7 @@ export const ROWS: Row[] = [
     power: '3.143',
     repower: '0.78',
     angle: '0.67',
-    name: 'c6',
+    id: 'c6'
   },
   {
     date: '02.03.2022',
@@ -83,6 +83,6 @@ export const ROWS: Row[] = [
     power: '3.343',
     repower: '0.76',
     angle: '0.65',
-    name: 'c7',
+    id: 'c7'
   }
 ];

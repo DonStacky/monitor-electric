@@ -8,5 +8,9 @@ export interface Row {
   power: string;
   repower: string;
   angle: string;
-  name: string;
+  id: string;
+}
+
+export interface CheckedRow {
+  [key: string]: boolean;
 }

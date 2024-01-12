@@ -105,6 +105,55 @@
       <div class="slider__thumb"></div>
     </div>
     <section class="measure">
+      <div class="overlay" *ngIf="isAddModalOpen">
+        <div class="modal measure__text">
+          <label for="source">Источник ввода</label>
+          <input type="text" name="source" #source />
+          <button class="button measure__button" (click)="addRow(source.value)">
+            Ввод
+          </button>
+          <button
+            class="button measure__button modal--close"
+            (click)="closeModal()">
+            x
+          </button>
+        </div>
+      </div>
+      <div class="overlay" *ngIf="isEditModalOpen">
+        <div class="modal modal__edit measure__text">
+          <label>Дата<input type="text" #date /></label>
+          <label>Время<input type="text" #time /></label>
+          <label>Источник ввода<input type="text" #source /></label>
+          <button
+            class="button measure__button"
+            (click)="editRow(date.value, time.value, source.value)">
+            Редактировать
+          </button>
+          <button
+            class="button measure__button modal--close"
+            (click)="closeModal()">
+            x
+          </button>
+        </div>
+      </div>
+      <div class="overlay" *ngIf="isDeleteModalOpen">
+        <div class="modal modal__delete measure__text">
+          <span>Удалить выбранные элементы?</span>
+          <div class="flex">
+            <button class="button measure__button" (click)="deleteRow()">
+              Ок
+            </button>
+            <button class="button measure__button" (click)="closeModal()">
+              Отмена
+            </button>
+          </div>
+          <button
+            class="button measure__button modal--close"
+            (click)="closeModal()">
+            x
+          </button>
+        </div>
+      </div>
       <div class="measure__head">
         <img
           src="../assets/image/Обозначение оборудования 1.png"
@@ -119,10 +168,10 @@
           <button class="measure__button button">
             <span class="icon icon__block"></span>Отменить проверку
           </button>
-          <button class="measure__button button" (click)="editRow()">
+          <button class="measure__button button" (click)="openEditModal()">
             <span class="icon icon__edit"></span>Редактировать
           </button>
-          <button class="measure__button button" (click)="deleteRow()">
+          <button class="measure__button button" (click)="openDeleteModal()">
             <span class="icon icon__delete"></span>Удалить
           </button>
         </div>
@@ -171,7 +220,7 @@
         <tbody>
           <tr>
             <td colspan="10" class="measure__add-row">
-              <button class="button" (click)="addRow()">
+              <button class="button" (click)="openAddModal()">
                 <span class="icon icon__plus"></span>
                 Добавить новые замеры
               </button>
@@ -179,8 +228,13 @@
           </tr>
           <tr *ngFor="let row of rows">
             <td>
-              <input type="checkbox" name={{row.name}} id={{row.name}} class="checkbox" />
-              <label for={{row.name}}></label>
+              <input
+                type="checkbox"
+                name="{{row.id}}"
+                id="{{row.id}}"
+                class="checkbox"
+                (click)="checkRow(row.id)" />
+              <label for="{{row.id}}"></label>
             </td>
             <td>{{row.date}}</td>
             <td>{{row.time}}</td>

@@ -2,6 +2,7 @@
   width: 40%;
   flex-grow: 1;
   margin-left: 3rem;
+  position: relative;
 
   &__head {
     margin: 1.6rem 0;
@@ -101,4 +102,62 @@
     border-radius: 50%;
     background: rgba($color: #004269, $alpha: 0.28);
   }
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+  width: 40rem;
+  height: 16rem;
+  padding: 1.6rem;
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  background-color: #ffffff;
+
+  &--close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0 0.6rem;
+  }
+
+  &__edit {
+    width: 50rem;
+    height: 22rem;
+    align-items: start;
+
+    & label {
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & button {
+      align-self: center;
+    }
+  }
+
+  &__delete {
+    justify-content: center;
+
+    & button:first-of-type {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
 }
