@@ -119,6 +119,7 @@
   border: 1px solid $primary-color;
   border-radius: 4px;
   background-color: #ffffff;
+  box-shadow: 0 1px 4px 0 $primary-color;
 
   &--close {
     position: absolute;

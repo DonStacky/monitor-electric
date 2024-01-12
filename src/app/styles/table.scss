@@ -22,6 +22,10 @@ tr:hover td:not(.measure__add-row) {
   background: rgba(#005baa, 0.1);
 }
 
+.selected {
+  background: rgba(#005baa, 0.1);
+}
+
 .table__head {
   font-size: 1.8rem;
   width: 50%;

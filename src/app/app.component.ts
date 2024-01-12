@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { ROWS } from './mock-rows';
-import { CheckedRow } from './row';
+import { Row, CheckedRow } from './row';
+import { DataService } from './data.service';
+import { nanoid } from 'nanoid';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +12,23 @@ import { CheckedRow } from './row';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  rows = ROWS;
+export class AppComponent implements OnInit {
+  rows: Row[] = [];
   checkedRows: CheckedRow = {};
+  checkedRowsId: string[] = [];
   isAddModalOpen = false;
   isEditModalOpen = false;
   isDeleteModalOpen = false;
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.getRows();
+  }
+
+  getRows() {
+    this.rows = this.dataService.getRows();
+  }
 
   openAddModal() {
     this.isAddModalOpen = true;
@@ -37,9 +49,8 @@ export class AppComponent {
   }
 
   editRow(date: string, time: string, source: string) {
-    const checkedRowsId = Object.keys(this.checkedRows);
     const filteredRows = this.rows.map((row) => {
-      if (checkedRowsId.includes(row.id)) {
+      if (this.checkedRowsId.includes(row.id)) {
         row.date = date;
         row.time = time;
         row.source = source;
@@ -53,9 +64,8 @@ export class AppComponent {
   }
 
   deleteRow() {
-    const checkedRowsId = Object.keys(this.checkedRows);
     const filteredRows = this.rows.filter(
-      (row) => !checkedRowsId.includes(row.id)
+      (row) => !this.checkedRowsId.includes(row.id)
     );
     this.rows = filteredRows;
 
@@ -65,8 +75,10 @@ export class AppComponent {
   checkRow(id: string) {
     if (this.checkedRows[id]) {
       delete this.checkedRows[id];
+      this.checkedRowsId = Object.keys(this.checkedRows);
     } else {
       this.checkedRows[id] = true;
+      this.checkedRowsId = Object.keys(this.checkedRows);
     }
   }
 
@@ -83,14 +95,14 @@ export class AppComponent {
     this.rows.unshift({
       date,
       time,
-      source: source,
+      source,
       phase: 'a',
       voltage: '1',
       amperage: '0.5',
       power: '3',
       repower: '0.7',
       angle: '0.8',
-      id: `c${this.rows.length}`
+      id: `c${nanoid()}`
     });
 
     this.isAddModalOpen = false;

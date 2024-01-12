@@ -226,7 +226,9 @@
               </button>
             </td>
           </tr>
-          <tr *ngFor="let row of rows">
+          <tr
+            *ngFor="let row of rows"
+            [class.selected]="checkedRowsId.includes(row.id)">
             <td>
               <input
                 type="checkbox"
